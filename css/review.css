@@ -1,0 +1,117 @@
+/* Commentaarlaag voor de voorbeeldversie. Niet in productie gebruiken. */
+.rv-bar {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  font-family: "GT Walsheim", system-ui, sans-serif;
+}
+.rv-bar__label {
+  background: #1B2B52;
+  color: #fff;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.rv-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #F9B5AA;
+  color: #1B2B52;
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+.rv-btn--secondary { background: #fff; font-size: 0.9rem; padding: 9px 14px; }
+.rv-btn:focus-visible { outline: 3px solid #003B80; outline-offset: 2px; }
+body.rv-picking { cursor: crosshair; }
+body.rv-picking .rv-hover {
+  outline: 3px solid #F9B5AA;
+  outline-offset: 3px;
+  background: rgba(249,181,170,0.18);
+}
+.rv-pin {
+  position: absolute;
+  z-index: 8000;
+  width: 26px;
+  height: 26px;
+  border-radius: 999px 999px 999px 0;
+  background: #F9B5AA;
+  color: #1B2B52;
+  font: 700 0.8rem/26px system-ui, sans-serif;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  pointer-events: auto;
+  cursor: help;
+}
+.rv-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9500;
+  background: rgba(27,43,82,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.rv-dialog {
+  background: #fff;
+  color: #1B2B52;
+  border-radius: 20px;
+  padding: 24px;
+  width: 100%;
+  max-width: 520px;
+  font-family: "GT Walsheim", system-ui, sans-serif;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+.rv-dialog h2 { font-size: 1.3rem; margin: 0 0 4px; color: #003B80; font-weight: 400; }
+.rv-dialog .rv-context {
+  font-size: 0.85rem;
+  color: #4E5B7C;
+  background: #FFF1C5;
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin: 0 0 14px;
+}
+.rv-context--clip { max-height: 4.5em; overflow: hidden; }
+.rv-dialog label { display: block; font-size: 0.85rem; margin: 10px 0 4px; }
+.rv-dialog input, .rv-dialog textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font: inherit;
+  padding: 10px 12px;
+  border: 1.5px solid rgba(0,59,128,0.25);
+  border-radius: 10px;
+}
+.rv-dialog textarea { min-height: 110px; resize: vertical; }
+.rv-dialog__actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; margin-top: 16px; }
+.rv-dialog__actions .rv-btn { white-space: nowrap; }
+.rv-dialog .rv-btn { box-shadow: none; }
+.rv-dialog .rv-btn--primary { background: #003B80; color: #fff; }
+.rv-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  z-index: 9600;
+  background: #003B80;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-family: "GT Walsheim", system-ui, sans-serif;
+}
+@media (max-width: 600px) {
+  .rv-bar { right: 12px; bottom: 12px; }
+  .rv-bar__label { display: none; }
+}
