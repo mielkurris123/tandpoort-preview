@@ -9,7 +9,7 @@
 
   var STORE = "rv-comments";
   var PAGE = location.pathname.split("/").pop() || "index.html";
-  var MAIL_TO = ["miel", "kurris"].join(".") + "@" + ["voka", "be"].join(".");
+  var MAIL_TO = ["miel", "kurris"].join("") + "@" + ["gmail", "com"].join(".");
   var picking = false;
   var hovered = null;
   var pins = [];
